@@ -6,7 +6,7 @@ import { Award, ExternalLink } from 'lucide-react'
 export default function Certifications() {
   const certifications = [
     {
-      title: 'Oracle Cloud Infrastructure 2024 Certified Foundations Associate',
+      title: 'Oracle Cloud Infrastructure 2024 Certified Architect Associate',
       issuer: 'Oracle',
       color: 'from-red-500 to-orange-500',
     },
@@ -21,9 +21,14 @@ export default function Certifications() {
       color: 'from-green-500 to-emerald-500',
     },
     {
-      title: 'Computer Networks and Internet Protocols',
-      issuer: 'NPTEL',
+      title: '250+ problems solved · Silver Badge',
+      issuer: 'CodeChef · Competitive Programming',
       color: 'from-purple-500 to-pink-500',
+    },
+    {
+      title: '574 submissions in the past year · SQL 50',
+      issuer: 'LeetCode · Competitive Programming',
+      color: 'from-amber-500 to-orange-500',
     },
   ]
 

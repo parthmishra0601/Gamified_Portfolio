@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react'
+import { Mail, Phone, Send, Github, Linkedin } from 'lucide-react'
 import { useState } from 'react'
 
 export default function Contact() {
@@ -27,7 +27,6 @@ export default function Contact() {
   const contactInfo = [
     { icon: Mail, label: 'Email', value: 'mishra.parth04@gmail.com', href: 'mailto:mishra.parth04@gmail.com' },
     { icon: Phone, label: 'Phone', value: '+91 9971546328', href: 'tel:+919971546328' },
-    { icon: MapPin, label: 'Location', value: 'Chennai, India', href: '#' },
   ]
 
   const socialLinks = [
@@ -94,7 +93,7 @@ export default function Contact() {
                   required
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  rows="5"
+                  rows={5}
                   className="w-full px-4 py-3 glass rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition-all resize-none bg-white/10"
                   placeholder="Your message..."
                 />
@@ -169,25 +168,6 @@ export default function Contact() {
               </div>
             </motion.div>
 
-            {/* Availability Card */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
-              className="glass rounded-3xl p-6 hover-lift relative overflow-hidden"
-            >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-green-500/10 rounded-full blur-2xl"></div>
-              <div className="relative z-10">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="font-semibold text-white">Available for Work</span>
-                </div>
-                <p className="text-sm text-white">
-                  Open to internship and full-time opportunities
-                </p>
-              </div>
-            </motion.div>
           </div>
         </div>
       </motion.div>

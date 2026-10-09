@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail, MapPin, Phone, Download, Award } from 'lucide-react'
+import { Github, Linkedin, Mail, Phone, Award } from 'lucide-react'
 
 export default function Hero() {
   const socialLinks = [
@@ -16,8 +16,6 @@ export default function Hero() {
       projectsSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
-  const resumeLink = 'https://drive.google.com/file/d/1z5LHxZ7KvmFvGfP_HJMeW5Cvattv0o-S/view?usp=sharing';
 
   return (
     <section id="home" className="pt-32 pb-20">
@@ -39,7 +37,7 @@ export default function Hero() {
               className="inline-block mb-4"
             >
               <span className="px-4 py-2 rounded-full glass text-sm font-semibold gradient-text">
-                👋 Hello, I'm
+                👋 Hello, I&apos;m
               </span>
             </motion.div>
 
@@ -58,7 +56,7 @@ export default function Hero() {
               transition={{ delay: 0.4 }}
               className="text-xl md:text-2xl text-white mb-6"
             >
-              Full Stack Developer & Cloud Computing Enthusiast
+              Full-Stack Software Engineer
             </motion.p>
 
             <motion.p
@@ -67,8 +65,7 @@ export default function Hero() {
               transition={{ delay: 0.5 }}
               className="text-white mb-8 max-w-2xl"
             >
-              BTech in CSE with Cloud Computing @ SRM Institute of Science and Technology.
-              Building immersive web experiences with React, Next.js, and cutting-edge technologies.
+              I build fault-tolerant, high-performance systems across the SDLC, from Go, Docker, and Kubernetes infrastructure to React.js and Python REST APIs and Java/Spring Boot backends on AWS. I apply OOP, data structures and algorithms, CI/CD, and QA to deliver measurable results, including an 85% lift in matching accuracy.
             </motion.p>
 
             <motion.div
@@ -77,12 +74,6 @@ export default function Hero() {
               transition={{ delay: 0.6 }}
               className="flex flex-wrap gap-4"
             >
-              <a href={resumeLink} target="_blank" rel="noopener noreferrer">
-                <button className="px-6 py-3 bg-gradient-to-r from-primary to-secondary rounded-full font-semibold hover:scale-105 transition-transform glow-effect flex items-center gap-2">
-                  <Download size={20} />
-                  Download Resume
-                </button>
-              </a>
               <button 
                 onClick={handleViewProjects}
                 className="px-6 py-3 glass rounded-full font-semibold hover-lift text-white"
@@ -104,10 +95,6 @@ export default function Hero() {
           >
             <h3 className="text-xl font-semibold mb-4 gradient-text">Contact Info</h3>
             <div className="space-y-3">
-              <div className="flex items-center gap-3 text-white">
-                <MapPin size={20} className="text-primary" />
-                <span className="text-sm">Chennai, India</span>
-              </div>
               <div className="flex items-center gap-3 text-white">
                 <Phone size={20} className="text-primary" />
                 <span className="text-sm">+91 9971546328</span>
@@ -155,17 +142,17 @@ export default function Hero() {
             <div className="relative z-10">
               <div className="flex items-center gap-2 mb-2">
                 <Award size={20} className="text-yellow-400" />
-                <span className="font-semibold text-white">Tech Innovator</span>
+                <span className="font-semibold text-white">Software Engineer</span>
               </div>
-              <div className="text-3xl font-bold gradient-text mb-1">2+</div>
-              <div className="text-sm text-white">Years Experience</div>
+              <div className="text-3xl font-bold gradient-text mb-1">85%</div>
+              <div className="text-sm text-white">Matching accuracy improvement</div>
               <motion.div 
                 className="text-xs text-white mt-2 italic"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.5, duration: 1 }}
               >
-                Unlocked: Full Stack Mastery
+                Focus: systems, backend, and cloud engineering
               </motion.div>
             </div>
           </motion.div>

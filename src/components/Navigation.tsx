@@ -3,8 +3,17 @@
 import { motion } from 'framer-motion'
 import { Menu, X, Home, User, Code, Briefcase, Folder, Award, Mail, Moon, Sun, FolderOpen } from 'lucide-react'
 import { useState } from 'react'
+import { useTheme } from './ThemeProvider'
 
-export default function Navigation({ theme, toggleTheme }) {
+type NavigationProps = {
+  theme?: 'light' | 'dark'
+  toggleTheme?: () => void
+}
+
+export default function Navigation({ theme: controlledTheme, toggleTheme: controlledToggleTheme }: NavigationProps) {
+  const context = useTheme()
+  const theme = controlledTheme ?? context.theme
+  const toggleTheme = controlledToggleTheme ?? context.toggleTheme
   const [isOpen, setIsOpen] = useState(false)
 
   const navItems = [

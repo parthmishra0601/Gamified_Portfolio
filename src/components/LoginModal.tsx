@@ -51,7 +51,7 @@ export default function LoginModal({ onLogin }) {
           >
             <Lock size={30} className="text-white" />
           </motion.div>
-          <h2 className="text-3xl font-bold gradient-text">Access Parth's Portfolio</h2>
+          <h2 className="text-3xl font-bold gradient-text">Access Parth&apos;s Portfolio</h2>
           <p className="text-gray-400 mt-2">Enter the game realm to explore</p>
         </div>
 
